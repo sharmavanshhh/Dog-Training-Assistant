@@ -1,0 +1,11 @@
+Proprietary License
+
+Copyright (c) [2025] [Harshita Gupta]
+
+All rights reserved.
+
+This software is for personal use only. Unauthorized use, reproduction, modification, or distribution of this software is strictly prohibited.
+
+No part of this software may be used, copied, modified, or distributed without explicit permission from the author.
+
+The author makes no guarantees or warranties regarding the use of this software, and will not be held responsible for any damages or losses resulting from its use.
