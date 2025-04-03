@@ -1,6 +1,3 @@
-Sure! Here's the updated `README.md` with instructions to update API keys, SQL credentials, and email settings in `app.py`:
-
-```markdown
 # Dog Training Assistant
 
 A chatbot application designed to help dog owners with personalized training advice, behavior analysis, and health recommendations. The assistant provides guidance on various dog training methods, from basic commands to specific behavioral issues. The system also offers real-time responses and integrates with external APIs for breed and health-related information.
@@ -15,32 +12,47 @@ A chatbot application designed to help dog owners with personalized training adv
 
 ## Tech Stack
 
-- **Frontend**: React.js
-- **Backend**: Flask (Python)
-- **APIs**: 
-  - [TheDogAPI](https://thedogapi.com/) for breed-related information
-  - [Gemini API](https://gemini.openai.com/) for generative chatbot responses
-- **Database**: MySQL (for storing user history and training plans)
-- **Voice Synthesis**: Web Speech API for text-to-speech functionality
+- **Frontend**: React.js  
+- **Backend**: Flask (Python)  
+- **APIs**:  
+  - [TheDogAPI](https://thedogapi.com/) for breed-related information  
+  - [Gemini API](https://gemini.openai.com/) for generative chatbot responses  
+- **Database**: MySQL (for storing user history and training plans)  
+- **Voice Synthesis**: Web Speech API for text-to-speech functionality  
 
 ## Installation
 
-### Prerequisites
+### Prerequisites  
 
-1. Make sure you have Python 3.x installed.
-2. Install Node.js (for React frontend).
-3. Ensure you have MySQL set up for the database.
+1. Make sure you have Python 3.x installed.  
+2. Install Node.js (for React frontend).  
+3. Ensure you have MySQL set up for the database.  
 
-### Steps to Run the Project
+### Quick Setup  
 
-1. **Clone the repository**:
+To install all dependencies, run the `setup.bat` script:  
+
+```bash
+setup.bat
+```
+
+This script will:  
+- Set up a Python virtual environment  
+- Install backend dependencies (`pip install -r requirements.txt`)  
+- Install frontend dependencies (`npm install`)  
+
+### Manual Setup  
+
+If you prefer manual installation, follow these steps:  
+
+1. **Clone the repository**:  
    ```bash
    git clone https://github.com/codebyharshe/Dog-Training-Assistant.git
    cd Dog-Training-Assistant
    ```
 
-2. **Backend Setup (Flask)**:
-   - Navigate to the backend folder and create a virtual environment:
+2. **Backend Setup (Flask)**:  
+   - Navigate to the backend folder and create a virtual environment:  
      ```bash
      cd backend
      python -m venv venv
@@ -48,16 +60,17 @@ A chatbot application designed to help dog owners with personalized training adv
      .\venv\Scripts\activate  # For Windows
      ```
 
-   - Install the required dependencies:
+   - Install the required dependencies:  
      ```bash
      pip install -r requirements.txt
      ```
 
-   - **Update API keys, SQL credentials, and email settings**:
-     - Open `app.py` and update the following details:
-       - **API Keys**: Replace with your own API keys for [Gemini](https://gemini.openai.com/) and [TheDogAPI](https://thedogapi.com/).
-       - **MySQL Credentials**: Update the database credentials (`host`, `user`, `password`, `database`) with your own MySQL configuration.
-       - **Email Settings**: Set up your email credentials (email address and password) for sending emails through the app.
+   - **Update API keys, SQL credentials, and email settings**:  
+     - Open `app.py` and update the following details:  
+       - **API Keys**: Replace with your own API keys for [Gemini](https://gemini.openai.com/) and [TheDogAPI](https://thedogapi.com/).  
+       - **MySQL Credentials**: Update the database credentials (`host`, `user`, `password`, `database`) with your own MySQL configuration.  
+       - **Email Settings**: Set up your email credentials for sending notifications.  
+
      ```python
      # Example for updating API keys and database credentials in app.py
 
@@ -71,61 +84,71 @@ A chatbot application designed to help dog owners with personalized training adv
      EMAIL_PASSWORD = "your-email-password"
      ```
 
-   - After making these changes, run the Flask backend server:
-     ```bash
-     python app.py
-     ```
-
-3. **Frontend Setup (React)**:
-   - Navigate to the frontend folder:
+3. **Frontend Setup (React)**:  
+   - Navigate to the frontend folder:  
      ```bash
      cd frontend
      ```
 
-   - Install the required dependencies:
+   - Install the required dependencies:  
      ```bash
      npm install
      ```
 
-   - Start the React development server:
-     ```bash
-     npm start
-     ```
+## Running the Application  
 
-   - The frontend should now be running at `http://localhost:3000`.
+To start both the backend and frontend, run:  
 
-4. **Access the Application**:
-   - Once both the backend and frontend servers are running, navigate to `http://localhost:3000` in your browser to interact with the Dog Training Assistant.
-
-## Usage
-
-1. **Start a Chat Session**: Once the frontend is loaded, type or speak a query to start interacting with the chatbot.
-2. **Get Training Advice**: The bot will ask for details about the dog (breed, age, etc.) and generate a personalized training routine.
-3. **Breed Information**: The bot will provide detailed breed information based on your input.
-4. **Listen to Responses**: Click the speaker icon below the bot's response to hear it out loud.
-
-## Contributing
-
-1. Fork this repository.
-2. Create a new branch (`git checkout -b feature-name`).
-3. Commit your changes (`git commit -m 'Add some feature'`).
-4. Push to the branch (`git push origin feature-name`).
-5. Open a pull request.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgements
-
-- **Gemini API** for generating chatbot responses.
-- **TheDogAPI** for providing dog breed information.
-- **React.js** and **Flask** for creating the frontend and backend.
+```bash
+perro.bat
 ```
 
-### Summary of Changes:
+This script will:  
+- Activate the Python virtual environment  
+- Start the Flask backend server (`python app.py`)  
+- Start the React frontend (`npm start`)  
 
-- **Backend Configuration**: Instructed users to update API keys, MySQL credentials, and email settings in the `app.py` file.
-- **Installation**: Provided details on setting up the Flask backend and React frontend, with clear instructions on where to insert personal information.
-  
-Let me know if you need anything else!
+Alternatively, you can manually run:  
+
+```bash
+# In backend folder
+cd backend
+source venv/bin/activate  # For macOS/Linux
+.\venv\Scripts\activate  # For Windows
+python app.py
+
+# In another terminal, start frontend
+cd frontend
+npm start
+```
+
+### Access the Application  
+
+- Once both the backend and frontend servers are running, navigate to `http://localhost:3000` in your browser to interact with the Dog Training Assistant.  
+
+## Usage  
+
+1. **Start a Chat Session**: Once the frontend is loaded, type or speak a query to start interacting with the chatbot.  
+2. **Get Training Advice**: The bot will ask for details about the dog (breed, age, etc.) and generate a personalized training routine.  
+3. **Breed Information**: The bot will provide detailed breed information based on your input.  
+4. **Listen to Responses**: Click the speaker icon below the bot's response to hear it out loud.  
+
+## Contributing  
+
+1. Fork this repository.  
+2. Create a new branch (`git checkout -b feature-name`).  
+3. Commit your changes (`git commit -m 'Add some feature'`).  
+4. Push to the branch (`git push origin feature-name`).  
+5. Open a pull request.  
+
+## License  
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.  
+
+## Acknowledgements  
+
+- **Gemini API** for generating chatbot responses.  
+- **TheDogAPI** for providing dog breed information.  
+- **React.js** and **Flask** for creating the frontend and backend.  
+```
+
