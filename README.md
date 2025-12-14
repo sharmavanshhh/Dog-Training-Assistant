@@ -146,5 +146,3 @@ npm start
 - **Gemini API** for generating chatbot responses.  
 - **TheDogAPI** for providing dog breed information.  
 - **React.js** and **Flask** for creating the frontend and backend.  
-```
-
